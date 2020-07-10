@@ -1,0 +1,12 @@
+Redis
+celery
+numpy
+python-dateutil
+opencv-python
+keras
+scipy==1.4.1
+tensorflow-gpu
+coremltools
+pillow
+sklearn
+supervisor
