@@ -1,5 +1,5 @@
 # フロー図
-<img src="flowchart.png" alt="フロー図" style="width:750px;height:550px">
+<img src="flowchart.png" alt="フロー図">
 
 
 # フォルダー構築
