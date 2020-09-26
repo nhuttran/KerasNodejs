@@ -1,0 +1,17 @@
+<div class="oj-hybrid-padding">
+    <h5>ログイン</h5>
+    <div class="oj-flex-items-pad oj-sm-flex-items-initial">
+        <div class="oj-flex">
+            <div class="oj-flex-item" style="max-width:250px">
+                <oj-label for="loginId">ユーザーID</oj-label>
+                <oj-input-text id="loginId" value="{{loginId}}" raw-value="{{loginId}}" disabled="[[isDisabled]]"></oj-input-text>
+                <oj-label for="password">パスワード</oj-label>
+                <oj-input-password id="password" value="{{password}}" raw-value="{{password}}" disabled="[[isDisabled]]"></oj-input-password>
+                <br/>
+                <oj-button id='loginBtn' on-oj-action='[[onLoginBtnClick]]' disabled="[[isDisabled]]">
+                    <span>ログイン</span>
+                </oj-button>
+            </div>
+        </div>
+    </div>
+</div>

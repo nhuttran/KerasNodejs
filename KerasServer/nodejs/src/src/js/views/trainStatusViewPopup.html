@@ -1,0 +1,62 @@
+<oj-popup id="view-train-status"
+class="demo-popup"
+    tail="none"
+    auto-dismiss="none"
+    modality="modal"
+    position.of="window"
+    position.my.horizontal="center"
+    position.my.vertical="center" 
+    position.at.horizontal="center"
+    position.at.vertical="center">
+    <div class="demo-popup-body" style="width:600px;height:300px">
+        <div class="demo-popup-header"><h5><oj-bind-text value="{{title}}"></oj-bind-text></h5></div>
+        <div class="demo-popup-content">
+            <svg height="0" width="0">
+                <defs>
+                    <pattern id="pattern" 
+                        width="6" height="6" 
+                        patternUnits="userSpaceOnUse"
+                        patternTransform="rotate(45)">
+                        <rect width="6" height="6" fill="#336791"></rect>
+                        <rect x="3" width="6" height="6" fill="#ADD8E6" ></rect>
+                    </pattern>
+                </defs>
+            </svg>
+            <oj-label id="indicatorThreshold">VGG16モデル（<oj-bind-text value="{{vgg16StatusName}}"></oj-bind-text>）</oj-label>
+            <oj-status-meter-gauge 
+                class="horizontal-status-meter-sample"
+                min="0" max="100" value="{{vgg16CurrentStatus}}"
+                labelled-by="style"
+                plot-area.rendered="on"
+                metric-label.rendered="on"
+                metric-label.text-type = "percent"
+                svg-style="[[customSvgStyle]]" readonly style="width: 600px;">
+            </oj-status-meter-gauge>
+            <br/>
+            <oj-label id="indicatorThreshold">VGG19モデル（<oj-bind-text value="{{vgg19StatusName}}"></oj-bind-text>）</oj-label>
+            <oj-status-meter-gauge 
+                class="horizontal-status-meter-sample"
+                min="0" max="100" value="{{vgg19CurrentStatus}}"
+                labelled-by="style"
+                plot-area.rendered="on"
+                metric-label.rendered="on"
+                metric-label.text-type = "percent"
+                svg-style="[[customSvgStyle]]" readonly style="width: 600px;">
+            </oj-status-meter-gauge>
+            <br/>
+            <oj-label id="indicatorThreshold">VGG Faceモデル（<oj-bind-text value="{{vggFaceStatusName}}"></oj-bind-text>）</oj-label>
+            <oj-status-meter-gauge 
+                class="horizontal-status-meter-sample"
+                min="0" max="100" value="{{vggFaceCurrentStatus}}"
+                labelled-by="style"
+                plot-area.rendered="on"
+                metric-label.rendered="on"
+                metric-label.text-type = "percent"
+                svg-style="[[customSvgStyle]]" readonly style="width: 600px;">
+            </oj-status-meter-gauge>
+        </div>
+        <div class="demo-popup-footer">
+            <oj-button on-oj-action="[[popupClose]]" style="margin-top:15px; float: right;"><span>閉じる</span></oj-button>
+        </div>
+    </div>
+</oj-popup>

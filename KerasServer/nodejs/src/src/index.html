@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>人工知能技術研修システム</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1">
+    <link rel="icon" href="css/images/favicon.ico" type="image/x-icon" />
+    <!-- injector:theme -->
+    <link rel="stylesheet" href="css/libs/oj/v9.0.0/redwood/oj-redwood-min.css" type="text/css"/>
+    <!-- endinjector -->
+    <link rel="stylesheet" href="css/demo-alta-site-min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/app.css" type="text/css"/>
+  </head>
+  <body class="oj-web-applayout-body">
+    <script type="text/html" id="main_menu">
+      <li>
+        <oj-bind-if test="[[$parent.isDisplayMenu()]]">
+          <oj-bind-if test="[[$data.detail.isDisplay]]">
+          <a href="#">
+            <span :class="[[$data.detail.iconClass]]"></span>
+            <oj-bind-text value="[[$data.detail.label]]"></oj-bind-text>
+          </a>
+          </oj-bind-if>
+        </oj-bind-if>
+      </li>
+    </script>
+    <div id="globalBody" class="oj-offcanvas-outer-wrapper oj-offcanvas-page">
+      <div id="pageContent" class="oj-web-applayout-page">
+        <header role="banner" class="oj-web-applayout-header" style="max-height: 100px;">
+          <div role="navigation" class="oj-web-applayout-max-width oj-web-applayout-navbar">
+            <oj-navigation-list id="navTabBar" class="oj-sm-only-hide oj-md-condense oj-md-justify-content-flex-end"
+                                data="[[navDataProvider]]"
+                                edge="top"
+                                item.renderer="[[KnockoutTemplateUtils.getRenderer('main_menu', true)]]"
+                                selection="{{selection.path}}">
+            </oj-navigation-list>
+          </div>
+        </header>
+        <oj-module role="main" class="oj-web-applayout-max-width oj-web-applayout-content" config="[[moduleAdapter.koObservableConfig]]">
+        </oj-module>
+        <footer class="oj-web-applayout-footer" role="contentinfo">
+          <div class="oj-web-applayout-footer-item oj-web-applayout-max-width oj-text-secondary-color oj-text-sm">
+            Copyright © 2020 AI technology training system
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/utils/linq.js"></script>
+    <script type="text/javascript" src="js/libs/require/require.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+  </body>
+
+</html>

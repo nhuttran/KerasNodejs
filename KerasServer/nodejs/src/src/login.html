@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>ログイン</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1">
+    <link rel="icon" href="css/images/favicon.ico" type="image/x-icon" />
+    <!-- injector:theme -->
+    <link rel="stylesheet" href="css/libs/oj/v9.0.0/redwood/oj-redwood-min.css" type="text/css"/>
+    <!-- endinjector -->
+    <link rel="stylesheet" href="css/demo-alta-site-min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/app.css" type="text/css"/>
+</head>
+<body class="oj-web-applayout-body">
+<div id="globalBody" role="main" class="oj-web-applayout-max-width oj-web-applayout-content">
+    <oj-form-layout id="form-container">
+    <div  style="margin: 10px 10px 10px 10px;">
+        <oj-label for="loginId">ログインID</oj-label>
+        <oj-input-text id="loginId" value="[[loginId]]"></oj-input-text>
+        <oj-label for="password">パスワード</oj-label>
+        <oj-input-password id="password" value="[[password]]"></oj-input-password>
+        <br/>
+        <oj-button id='loginBtn' on-oj-action='[[onLoginBtnClick]]'>
+            <span>ログイン</span>
+        </oj-button>
+    </div>
+</oj-form-layout>
+</div>
+<script type="text/javascript" src="js/utils/linq.js"></script>
+<script type="text/javascript" src="js/libs/require/require.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
