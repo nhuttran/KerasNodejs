@@ -12,7 +12,7 @@
 >　|_ KerasClient（画像認識学習側）<br/>
 >　|　　　|_ traindata（公開なし）<br/>
 >　|　　　|_ trainapp（AIワーカー）<br/>
->　|_ KerasApp（スマホ向けのAIアプリ-公開なし）<br/>
+>　|_ KerasApp（スマホアプリ-公開なし）<br/>
 >
 > ※docker-compose.yml、Dockerfileなども公開なし
 
