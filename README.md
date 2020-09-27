@@ -44,7 +44,7 @@
 - 開発言語: Python 3.8
 - ディープラーニング方法: Keras (VGG16モデル, VGG19モデルなど)
 - モデルイメージ<br/>
-    <img src="vgg_model.png" alt="VGG16" style="width:500px">
+    <img src="vgg_model.png" alt="VGG16" width="550px">
 
 ### ② クライアント側
 - ブラウザー<br/>
