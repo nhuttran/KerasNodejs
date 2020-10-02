@@ -217,12 +217,6 @@ class TrainAuth(object):
 
     def move_train_file(self, train_path_file):
         try:
-            # file_name = os.path.basename(train_path_file)
-            # finish_path_file = "{}/{}".format(self.finish_path, file_name)
-            # # ファイルが存在する場合、ファイルを削除する
-            # if os.path.isfile(finish_path_file):
-            #     os.remove(finish_path_file)
-            # shutil.move(train_path_file, self.finish_path)
             os.remove(train_path_file)
         except Exception as e:
             logging.info("完了フォルダーへファイルが移動できません. [%s]" % train_path_file)
@@ -237,31 +231,3 @@ if __name__ == "__main__":
     x_data = numpy.array(train_faces)
     y_data = numpy.array(labels)
     x_data = x_data.astype('float32')
-
-    # from keras.utils import np_utils
-    # from keras.models import Sequential, Model
-    # from keras.applications.vgg16 import VGG16
-    # from keras.layers import Dense, Input, Flatten, Dropout, Activation
-    # from keras.preprocessing.image import ImageDataGenerator
-    # from keras import optimizers
-    # #import keras.backend.tensorflow_backend as tb
-    # from keras.callbacks import LambdaCallback
-    # from keras.callbacks import Callback
-    # from keras.callbacks import CSVLogger
-    # from sklearn.model_selection import train_test_split
-    # import keras.callbacks
-
-    # nb_classes = len(class_labels)
-    # y_data = np_utils.to_categorical(y_data, nb_classes)
-    # x_train, x_test, y_train, y_test = train_test_split(x_data, y_data, test_size=0.3)
-    # input_tensor = Input(shape=(224, 224, 3))
-    # input_model = VGG16(include_top=False, weights='imagenet', input_tensor=input_tensor)
-    # # FC層の作成
-    # out_model = Sequential()
-    # out_model.add(Flatten(input_shape=input_model.output_shape[1:]))
-    # out_model.add(Dense(256, activation='relu'))
-    # out_model.add(Dropout(0.2))
-    # out_model.add(Dense(nb_classes, activation='softmax'))
-
-    # #  InceptionResNetV2とFC層を結合してモデルを作成（完成図が上の図）
-    # model = Model(inputs=input_model.input, outputs=out_model(input_model.output))
